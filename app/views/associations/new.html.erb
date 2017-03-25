@@ -1,0 +1,18 @@
+<%#= form_for @association do |f| %>
+
+  <%#= f.label %>
+
+<%# end %>
+
+
+<form class="" action="/associations" method="post">
+    <% @users.each do |user| %>
+
+      <div class="">
+          <%= user.full_name.split(' ')[0] %><br>
+          <input type="text" name="clues[<%=user.full_name.split(' ')[0]%>]" placeholder="Retype name above.">
+      </div>
+    <% end %>
+    <input type="submit" />
+    
+</form>

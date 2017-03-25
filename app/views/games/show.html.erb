@@ -1,0 +1,18 @@
+<h3>Your Results</h3>
+
+
+
+<div class="">
+Answers:<br>
+<% @game.guesses.each do |key, value| %>
+<%= key %><br>
+<% end %>
+<br>
+</div>
+
+<div class="">
+Questions:<br>
+<% @game.guesses.each do |key, value| %>
+<%= value %><br>
+<% end %>
+</div>
