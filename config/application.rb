@@ -13,10 +13,7 @@ module Namify
     # -- all .rb files in that directory are automatically loaded.
 
     config.middleware.use OmniAuth::Builder do 
-      provider :developer
-      
-    end
-      
+      provider :developer      
     end
   end
 end
