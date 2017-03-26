@@ -1,24 +1,20 @@
 
 
-<h2>Welcome, <%= current_user.user_name %>!</h2>
-
+<div>
 <p>Student: <%= current_user.full_name %></p>
 <p>Cohort: <%= current_user.cohort%></p>
-
+</div>
 <img src="<%=current_user.picture_url%>" height="120" width="120">
 
 
 <% if current_user.games %>
 <h3>Your scores</h3>
+<ul>
   <% sum = 0  %>
   <% current_user.games.each do |game| %>
     <%  sum = sum + game.check_ratio %>
   <% end %>
-  <%= sum %>
+  <li><%= sum %></li>
 <% end %>
-
-
-<ul>
-<li></li>
 </ul>
 

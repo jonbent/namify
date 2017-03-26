@@ -1,8 +1,3 @@
-<p>Associating names with random, yet meaningful things can help you remmeber a person's name. For example, to remember "May's" name I could create a mental association with the word "spring".</p>
-
-<p>For visual learners the process of retyping name can help form a mental picture of the persons name.</p>
-
-
 <form class="" action="/associations/<%=@association.id%>/games" method="post">
   <% @association.clues.each do |key, value| %>
     <img class="profile-image"src="<%= @users[@i].picture_url %>">

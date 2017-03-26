@@ -1,0 +1,19 @@
+<section>
+  <div>
+  <%= image_tag('namify_reverse.png', :class => "home_image")%>
+  </div>
+
+
+  <div>
+    <% if logged_in?  %>
+    <p class="basic_text">Welcome, <%= current_user.full_name %>!</p>
+    <% end %>
+  </div>
+
+
+  <div class="button">
+  <%= link_to 'Enter', :github_auth %>
+  </div>
+</section>
+
+<%= link_to 'Log in/Sign up', :github_auth %>
