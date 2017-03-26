@@ -2,6 +2,7 @@ class GamesController < ApplicationController
   skip_before_action :verify_authenticity_token
   def new
     @i = 0
+    @j = 0
     current_user = User.first
     @association = Association.find(params[:association_id])
     @game = Game.new
@@ -23,7 +24,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
-    
+
   end
 
 end
