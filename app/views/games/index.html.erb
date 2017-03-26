@@ -1,0 +1,22 @@
+<section>
+  <div>
+  <%= image_tag('namify_reverse.png', :class => "home_image")%>
+  </div>
+
+
+  <div class="button">
+		<% if !logged_in? %>
+			<%= link_to 'Enter', :github_auth %>
+		<% else %>
+			<%= link_to "Log out", :session_destroy %>
+		<% end %>
+	</div>
+
+
+
+  <div class="button">
+  <%= link_to 'Enter', :github_auth %>
+  </div>
+</section>
+
+<%= link_to 'Log in/Sign up', :github_auth %>
