@@ -1,5 +1,24 @@
-This is the main page.
 
-<%= link_to 'Log in/Sign up', :github_auth %>
 
-<p>Welcome, <%= current_user.full_name %>!</p>
+<h2>Welcome, <%= current_user.user_name %>!</h2>
+
+<p>Student: <%= current_user.full_name %></p>
+<p>Cohort: <%= current_user.cohort%></p>
+
+<img src="<%=current_user.picture_url%>" height="120" width="120">
+
+
+<% if current_user.games %>
+<h3>Your scores</h3>
+  <% sum = 0  %>
+  <% current_user.games.each do |game| %>
+    <%  sum = sum + game.check_ratio %>
+  <% end %>
+  <%= sum %>
+<% end %>
+
+
+<ul>
+<li></li>
+</ul>
+
