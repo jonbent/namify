@@ -14,3 +14,42 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).on('turbolinks:load', function() {
+  associationsHideOnLoad();
+  changeActiveRetype();
+  switchToAssociation();
+});
+
+var associationsHideOnLoad = function(){
+  $('.retype').removeClass('hidden');
+  $('.association').addClass('hidden');
+
+}
+
+var changeActiveRetype = function(){
+  $('.retype-input').on('change', function(e){
+    if ($(this).val() === $(this).attr('placeholder')){
+      $(this).addClass('hidden')
+      $(this).removeClass('active')
+      var currentButton = $(this).next().next()
+      currentButton.addClass('hidden')
+      currentButton.removeClass('active')
+      var nextInput = $(this).next().next().next()
+      nextInput.removeClass('hidden')
+      nextInput.addClass('active')
+      var nextButton = nextInput.next().next()
+      nextButton.removeClass('hidden')
+      nextButton.addClass('active')
+    }
+  })
+}
+
+var switchToAssociation = function(){
+  $('.retype-input').on('change', function(){
+
+  if (!$('.retype-input.active').attr('class')){
+    $('.retype').addClass('hidden')
+    $('.association').removeClass('hidden')
+  }
+})
+}

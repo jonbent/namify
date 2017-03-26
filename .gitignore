@@ -15,5 +15,10 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+<<<<<<< HEAD
 .env
 
+=======
+
+.env
+>>>>>>> e5556a7e9466ddd26694cc1659cc765c89155a6f

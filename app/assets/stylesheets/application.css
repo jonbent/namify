@@ -19,6 +19,7 @@
   height: 5em;
 }
 
+
 .home_image{
 	width: 336px;
   height: 100px;
@@ -74,3 +75,11 @@ body {
   	left: 44%;
 }
 
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
