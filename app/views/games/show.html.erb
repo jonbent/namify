@@ -10,9 +10,21 @@ Answers:<br>
 <br>
 </div>
 
-<div class="">
+<div class="questions" style="display:inline-block; width:20%;">
 Questions:<br>
 <% @game.guesses.each do |key, value| %>
 <%= value %><br>
 <% end %>
 </div>
+
+<div class="questions" style="display:inline-block; width:20%;">
+
+<% @game.checks.each do |checked| %>
+  <input type="checkbox" <% if checked == 1 %> checked="checked"<% end %> /><br>
+
+<% end %>
+</div>
+<br>
+<%= link_to "Home", root_path%>
+
+<%= link_to "New Game", new_association_path %>

@@ -18,3 +18,11 @@
   width: 5em;
   height: 5em;
 }
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
