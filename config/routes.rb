@@ -6,10 +6,13 @@ Rails.application.routes.draw do
 
   get 'session/destroy'
 
+  resources 'users', only: :show
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'associations#new'
   resources 'associations', only: [:new, :create] do
     resources 'games', only: [:show, :new, :create]
   end
+
+  get '/logout', to: 'sessions#destroy', as: 'logout'
 end

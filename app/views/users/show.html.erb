@@ -10,8 +10,11 @@
 		<% end %>
 	</div>
 
-
 	<div class="button">
-	<%= link_to 'Enter', :github_auth %>
+		<% if !logged_in? %>
+			<%= link_to 'Enter', :github_auth %>
+		<% else %>
+			<%= link_to "Log out", :session_destroy %>
+		<% end %>
 	</div>
 </section>
