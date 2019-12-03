@@ -4,11 +4,14 @@
   </div>
 
 
-  <div>
-    <% if logged_in?  %>
-    <p class="basic_text">Welcome, <%= current_user.full_name %>!</p>
-    <% end %>
-  </div>
+  <div class="button">
+		<% if !logged_in? %>
+			<%= link_to 'Enter', :github_auth %>
+		<% else %>
+			<%= link_to "Log out", :session_destroy %>
+		<% end %>
+	</div>
+
 
 
   <div class="button">

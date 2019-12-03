@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <nav>
+      <a href="/associations/new">New Game</a>
+      <% if logged_in? %>
+        <a href="/users/<%=current_user.id%>">Home</a>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>

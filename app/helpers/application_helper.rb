@@ -3,7 +3,7 @@ module ApplicationHelper
     session[:user_id] = user.id
   end
 
-  def logout
+  def session_logout
     session.delete(:user_id)
   end
 

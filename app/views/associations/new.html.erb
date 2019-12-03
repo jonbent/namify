@@ -9,9 +9,9 @@
 <form class="association association-form" action="/associations" method="post">
     <% @users.each do |user| %>
 
-      <div class="">
+      <div class="" <% if @j == 0 %>class="association-input active"<% else %>class="association-input hidden"<% end %>>
           <%= user.full_name.split(' ')[0] %><br>
-          <input type="text" name="clues[<%=user.full_name.split(' ')[0]%>]" placeholder="Retype name above.">
+          <input type="text" name="clues[<%=user.full_name.split(' ')[0]%>]" placeholder="Helpful hint">
       </div>
     <% end %>
     <input type="submit" />

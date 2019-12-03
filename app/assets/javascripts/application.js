@@ -47,9 +47,9 @@ var changeActiveRetype = function(){
 var switchToAssociation = function(){
   $('.retype-input').on('change', function(){
 
-  if (!$('.retype-input.active').attr('class')){
-    $('.retype').addClass('hidden')
-    $('.association').removeClass('hidden')
-  }
-})
+    if (!$('.retype-input.active').attr('class')){
+      $('.retype').addClass('hidden')
+      $('.association').removeClass('hidden')
+    }
+  })
 }
