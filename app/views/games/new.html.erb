@@ -1,0 +1,10 @@
+<form class="" action="/associations/<%=@association.id%>/games" method="post">
+  <% @association.clues.each do |key, value| %>
+    <img class="profile-image"src="<%= @users[@i].picture_url %>">
+    <label ><%= value %></label>
+    <input type="text" name="clues[<%=key%>]" placeholder="Guess a name">
+    <% @i += 1 %>
+    <br>
+  <% end %>
+  <input type="submit" value="Submit">
+</form>

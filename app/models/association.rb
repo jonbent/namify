@@ -1,4 +1,4 @@
 class Association < ApplicationRecord
+  serialize :clues, JSON
   belongs_to :user
-  belongs_to :player
 end

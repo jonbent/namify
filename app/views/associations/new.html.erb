@@ -1,0 +1,28 @@
+<div class="association association-description">
+  <p>Associating names with random, yet meaningful things can help you remmeber a person's name. For example, to remember "May's" name I could create a mental association with the word "spring".</p>
+</div>
+
+<div class="retype retype-description hidden">
+  <p>For visual learners the process of retyping name can help form a mental picture of the persons name.</p>
+</div>
+
+<form class="association association-form" action="/associations" method="post">
+    <% @users.each do |user| %>
+
+      <div class="" <% if @j == 0 %>class="association-input active"<% else %>class="association-input hidden"<% end %>>
+          <%= user.full_name.split(' ')[0] %><br>
+          <input type="text" name="clues[<%=user.full_name.split(' ')[0]%>]" placeholder="Helpful hint">
+      </div>
+    <% end %>
+    <input type="submit" />
+
+</form>
+
+<div class="retype retype-form hidden">
+  <% i = 0 %>
+  <% @users.each do |user| %>
+    <input type="text" <% if i == 0 %>class="retype-input active"<% else %>class="retype-input hidden"<% end %> placeholder="<%= user.full_name.split(' ')[0] %>"><br>
+    <button <% if i == 0 %>class="retype-submit active"<% else %>class="retype-submit hidden"<% end %>type="button">Submit</button>
+    <% i += 1 %>
+  <% end %>
+</div>
