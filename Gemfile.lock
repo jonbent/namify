@@ -108,7 +108,7 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
     pg (1.1.4)
-    puma (3.12.1)
+    puma (3.12.4)
     rack (2.0.7)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -193,7 +193,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   pg (>= 0.18, < 2.0)
-  puma (~> 3.0)
+  puma (~> 3.12)
   rails (~> 5.0.2)
   sass-rails (~> 5.0)
   shotgun
